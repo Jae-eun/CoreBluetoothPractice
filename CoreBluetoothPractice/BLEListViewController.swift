@@ -112,7 +112,8 @@ extension BLEListViewController: CBCentralManagerDelegate {
             peripherals.append(peripheral)
             
             DispatchQueue.main.async { [weak self] in
-                self?.updateTitle("Scanning Devices..\(String(describing: self?.peripherals.count))")
+                guard let periCount = self?.peripherals.count else { return }
+                self?.updateTitle("Scanning Devices..\(periCount)")
                 self?.tableView.reloadData()
             }
         }
