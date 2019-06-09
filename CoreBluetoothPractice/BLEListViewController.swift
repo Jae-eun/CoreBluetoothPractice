@@ -60,8 +60,9 @@ final class BLEListViewController: UITableViewController {
         
         let peripheral = peripherals[indexPath.row]
         cell.textLabel?.text = peripheral.name == nil ? peripheral.identifier.uuidString : peripheral.name
-        cell.detailTextLabel?.text = "\(peripheral.state)=\(peripheral.state.rawValue)"
-        
+        if let periState = PeriState(rawValue: peripheral.state.rawValue) {
+            cell.detailTextLabel?.text = "\(peripheral.state)=\(periState)"
+        }
         return cell
     }
     
@@ -99,7 +100,7 @@ extension BLEListViewController: CBCentralManagerDelegate {
     
     func centralManager(_ central: CBCentralManager,
                         didDiscover peripheral: CBPeripheral,
-                        advertisementData: [String : Any],
+                        advertisementData: [String: Any],
                         rssi RSSI: NSNumber) {
         print("peripheral: \(peripheral), rssi: \(RSSI)")
         

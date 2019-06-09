@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		00161AB522AD52B400C226FC /* CBPeripheralState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00161AB422AD52B400C226FC /* CBPeripheralState.swift */; };
 		007A338A2268CD930064CDB7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007A33892268CD930064CDB7 /* AppDelegate.swift */; };
 		007A338C2268CD930064CDB7 /* BLEListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007A338B2268CD930064CDB7 /* BLEListViewController.swift */; };
 		007A338F2268CD930064CDB7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 007A338D2268CD930064CDB7 /* Main.storyboard */; };
@@ -36,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		00161AB422AD52B400C226FC /* CBPeripheralState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CBPeripheralState.swift; sourceTree = "<group>"; };
 		007A33862268CD930064CDB7 /* CoreBluetoothPractice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoreBluetoothPractice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		007A33892268CD930064CDB7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		007A338B2268CD930064CDB7 /* BLEListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLEListViewController.swift; sourceTree = "<group>"; };
@@ -110,6 +112,7 @@
 				007A33952268CD940064CDB7 /* LaunchScreen.storyboard */,
 				007A33982268CD940064CDB7 /* Info.plist */,
 				007A33902268CD930064CDB7 /* CoreBluetoothPractice.xcdatamodeld */,
+				00161AB422AD52B400C226FC /* CBPeripheralState.swift */,
 			);
 			path = CoreBluetoothPractice;
 			sourceTree = "<group>";
@@ -272,6 +275,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				007A338C2268CD930064CDB7 /* BLEListViewController.swift in Sources */,
+				00161AB522AD52B400C226FC /* CBPeripheralState.swift in Sources */,
 				007A338A2268CD930064CDB7 /* AppDelegate.swift in Sources */,
 				007A33922268CD930064CDB7 /* CoreBluetoothPractice.xcdatamodeld in Sources */,
 			);
