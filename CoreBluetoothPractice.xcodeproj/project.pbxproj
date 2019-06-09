@@ -8,13 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		007A338A2268CD930064CDB7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007A33892268CD930064CDB7 /* AppDelegate.swift */; };
-		007A338C2268CD930064CDB7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007A338B2268CD930064CDB7 /* ViewController.swift */; };
+		007A338C2268CD930064CDB7 /* BLEListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007A338B2268CD930064CDB7 /* BLEListViewController.swift */; };
 		007A338F2268CD930064CDB7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 007A338D2268CD930064CDB7 /* Main.storyboard */; };
 		007A33922268CD930064CDB7 /* CoreBluetoothPractice.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 007A33902268CD930064CDB7 /* CoreBluetoothPractice.xcdatamodeld */; };
 		007A33942268CD940064CDB7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 007A33932268CD940064CDB7 /* Assets.xcassets */; };
 		007A33972268CD940064CDB7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 007A33952268CD940064CDB7 /* LaunchScreen.storyboard */; };
 		007A33A22268CD940064CDB7 /* CoreBluetoothPracticeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007A33A12268CD940064CDB7 /* CoreBluetoothPracticeTests.swift */; };
 		007A33AD2268CD940064CDB7 /* CoreBluetoothPracticeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007A33AC2268CD940064CDB7 /* CoreBluetoothPracticeUITests.swift */; };
+		007A33BC2268D5F50064CDB7 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 007A33BB2268D5F50064CDB7 /* CoreBluetooth.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,7 +38,7 @@
 /* Begin PBXFileReference section */
 		007A33862268CD930064CDB7 /* CoreBluetoothPractice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoreBluetoothPractice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		007A33892268CD930064CDB7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		007A338B2268CD930064CDB7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		007A338B2268CD930064CDB7 /* BLEListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLEListViewController.swift; sourceTree = "<group>"; };
 		007A338E2268CD930064CDB7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		007A33912268CD930064CDB7 /* CoreBluetoothPractice.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreBluetoothPractice.xcdatamodel; sourceTree = "<group>"; };
 		007A33932268CD940064CDB7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -49,6 +50,7 @@
 		007A33A82268CD940064CDB7 /* CoreBluetoothPracticeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoreBluetoothPracticeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		007A33AC2268CD940064CDB7 /* CoreBluetoothPracticeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreBluetoothPracticeUITests.swift; sourceTree = "<group>"; };
 		007A33AE2268CD940064CDB7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		007A33BB2268D5F50064CDB7 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				007A33BC2268D5F50064CDB7 /* CoreBluetooth.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +86,7 @@
 				007A33A02268CD940064CDB7 /* CoreBluetoothPracticeTests */,
 				007A33AB2268CD940064CDB7 /* CoreBluetoothPracticeUITests */,
 				007A33872268CD930064CDB7 /* Products */,
+				007A33BA2268D5F50064CDB7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -100,7 +104,7 @@
 			isa = PBXGroup;
 			children = (
 				007A33892268CD930064CDB7 /* AppDelegate.swift */,
-				007A338B2268CD930064CDB7 /* ViewController.swift */,
+				007A338B2268CD930064CDB7 /* BLEListViewController.swift */,
 				007A338D2268CD930064CDB7 /* Main.storyboard */,
 				007A33932268CD940064CDB7 /* Assets.xcassets */,
 				007A33952268CD940064CDB7 /* LaunchScreen.storyboard */,
@@ -126,6 +130,14 @@
 				007A33AE2268CD940064CDB7 /* Info.plist */,
 			);
 			path = CoreBluetoothPracticeUITests;
+			sourceTree = "<group>";
+		};
+		007A33BA2268D5F50064CDB7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				007A33BB2268D5F50064CDB7 /* CoreBluetooth.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,7 +271,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				007A338C2268CD930064CDB7 /* ViewController.swift in Sources */,
+				007A338C2268CD930064CDB7 /* BLEListViewController.swift in Sources */,
 				007A338A2268CD930064CDB7 /* AppDelegate.swift in Sources */,
 				007A33922268CD930064CDB7 /* CoreBluetoothPractice.xcdatamodeld in Sources */,
 			);
