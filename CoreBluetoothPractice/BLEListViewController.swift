@@ -22,15 +22,7 @@ final class BLEListViewController: UITableViewController {
         updateTitle("Scanning Devices..")
         centralManager = CBCentralManager(delegate: self,
                                           queue: DispatchQueue(label: "BLE_QUEUE"),
-                                          options: nil)
-    }
-    
-    private func scanBluetooth() {
-        centralManager?.scanForPeripherals(withServices: nil, options: nil)
-    }
-    
-    private func updateTitle(_ text: String) {
-        title = text
+                                          options: [CBCentralManagerOptionShowPowerAlertKey: true])
     }
     
     @IBAction func stop(_ sender: Any) {
@@ -44,6 +36,39 @@ final class BLEListViewController: UITableViewController {
         peripherals.removeAll()
         tableView.reloadData()
         scanBluetooth()
+    }
+    
+    private func scanBluetooth() {
+        centralManager?.scanForPeripherals(withServices: nil, options: nil)
+    }
+    
+    private func updateTitle(_ text: String) {
+        title = text
+    }
+    
+    private func setSettingAlert() {
+        let settingAlert = UIAlertController(title: "설정", message: "블루투스가 꺼져있습니다.", preferredStyle: UIAlertController.Style.alert)
+        
+        let moveAction = UIAlertAction(title: "설정으로 이동",
+                                       style: UIAlertAction.Style.default) { _ in
+                                        self.openSetting()
+        }
+        
+        let cancelAction = UIAlertAction(title: "취소", style: UIAlertAction.Style.cancel, handler: nil)
+        
+        settingAlert.addAction(moveAction)
+        settingAlert.addAction(cancelAction)
+        
+        present(settingAlert, animated: true, completion: nil)
+        
+    }
+    
+    private func openSetting() {
+        guard let url = URL(string: UIApplication.openSettingsURLString) else { return }
+        let app = UIApplication.shared
+        DispatchQueue.main.async {
+            app.open(url)
+        }
     }
     
     // MARK: - TableViewDataSource
@@ -80,6 +105,8 @@ extension BLEListViewController: CBCentralManagerDelegate {
         print("state: \(central.state.hashValue)")
         if central.state == .poweredOn {
             scanBluetooth()
+        } else {
+//            setSettingAlert()
         }
     }
     
